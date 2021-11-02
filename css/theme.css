@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Nunito+Sans:wght@400;600;700;800&display=swap');
+
+*{font-family: 'Nunito Sans', sans-serif;box-sizing: border-box;}
+
+body,html{height: 100%;}
+
+.h1,.h2,.h3,.h4,.h5,.h6,
+.fs-1,.fs-2,.fs-3,.fs-4,
+.fs-4,.fs-5,.fs-6,.display-1,
+.display-2,.display-3,.display-4,
+.display-5,.display-6{
+    font-family: 'DM Serif Display', serif;
+}
+
+.model{
+    width: 45%;
+    background-image: url('../asset/image/model-min.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    clip-path: polygon(0 0, 81% 0, 100% 100%, 0% 100%);
+    z-index: -9999;
+}
+
+.btn{
+    border-radius: 0;
+    letter-spacing: 1.25px;
+    font-weight: 600 !important;
+}
+
+.btn-lg{
+    font-size: 16px;
+    padding: 15px 24px;
+}
+
+.card{border-radius: 0;}
+.card-img-top{border-radius: 0;}
+
+.hero{
+    height: 100vh;
+    overflow: hidden;
+}
+
+.fit-cover{object-fit: cover;}
+
+.float-badge{
+    position: absolute;
+    top: 0;
+    right: -28%;
+    transform: translate(50%, 50%);
+}
+
+
+
+.navbar-dark .navbar-brand{color: #000000;}
+.navbar-dark .nav-link{color: #212529 !important;}
+
+@media screen and (max-width: 768px){
+  .float-badge{
+      position: static;
+      transform: none;
+  }
+  .float-badge img{
+    width: 100px;
+  }
+  .navbar-md-black{background-color: #000000;}
+  .navbar-dark .navbar-brand{color: #FFFFFF;}
+  .navbar-dark .nav-link{color: #FFFFFF !important;}
+
+}
+
+.is-hover{
+  opacity: 0;
+  transform: translate(0, 100%);
+  transition: all .5s;
+}
+
+.card:hover .is-hover{
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+@-webkit-keyframes spin /* Safari and Chrome */ {
+    from {
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.spin {
+  -webkit-animation: spin 8s linear infinite;
+  -moz-animation: spin 8s linear infinite;
+  -ms-animation: spin 8s linear infinite;
+  -o-animation: spin 8s linear infinite;
+  animation: spin 8s linear infinite;
+}
